@@ -1,5 +1,7 @@
+
 ```markdown
-# BankingSimulation
+````
+## BankingSimulation
 
 A console-based banking system that simulates real-world banking operations including customer registration, secure login, deposits, withdrawals, fund transfers, transaction history logging, report generation, and email alerts when minimum balance rules are violated.
 
@@ -25,6 +27,7 @@ A console-based banking system that simulates real-world banking operations incl
 
 ## Project Structure
 
+
 ```
 BankingSimulation/
 ├─ src/
@@ -39,7 +42,6 @@ BankingSimulation/
 ├─ bank_reports/
 ├─ pom.xml
 └─ README.md
-
 
 ````
 
@@ -102,34 +104,44 @@ After Login:
 
 ## Screenshots
 
-### Registration
+### 1.Registration
+
 ![Registration](https://github.com/user-attachments/assets/32db3610-1414-492b-b192-549d79d76fb4)
 
-### Login
+### 2.Login
+
 ![Login](https://github.com/user-attachments/assets/f2e058ad-4757-4d45-bf7f-610eaa413a04)
 
-### Deposit
+### 3.Deposit
+
 ![Deposit](https://github.com/user-attachments/assets/f2e058ad-4757-4d45-bf7f-610eaa413a04)
 
-### Withdraw
+### 4.Withdraw
+
 ![Withdraw](https://github.com/user-attachments/assets/793fcbac-e697-4635-aad4-8e3992823d98)
 
-### Transfer
+### 5.Transfer
+
 ![Transfer](https://github.com/user-attachments/assets/44baadcd-8005-46de-a9b9-8c420d727d60)
 
-### Account Details
+### 6.Account Details
+
 ![Account Details](https://github.com/user-attachments/assets/cfab97bb-eeb8-4882-93fa-bc3ea7179493)
 
-### Transaction History
+### 7.Transaction History
+
 ![Transaction History](https://github.com/user-attachments/assets/502e220c-1961-40e5-b2b1-3041f2768003)
 
-### Report File (bank_reports/)
+### 8.Report File (bank_reports/)
+
 ![Report File](https://github.com/user-attachments/assets/3ef2f3fc-9a7e-4d66-a307-6215996bbec2)
 
-### Withdraw (Insufficient Balance Case)
+### 9.Withdraw (Insufficient Balance Case)
+
 ![Insufficient Balance](https://github.com/user-attachments/assets/ebb66562-7b85-4b90-afb3-43c273680b90)
 
-### Email Alert (Low Balance)
+### 10.Email Alert (Low Balance)
+
 ![Email Alert](https://github.com/user-attachments/assets/6aa3a201-7221-4f30-9482-44da717a8bdc)
 
 ## Future Improvements
@@ -142,7 +154,8 @@ After Login:
 ## Author
 
 **Preetam Kumar Giri**
-GitHub: `preetamfain2020-tech`
+```
+GitHub:`preetamfain2020-tech`
+```
 
-```
-```
+
