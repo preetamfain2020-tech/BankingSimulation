@@ -26,7 +26,6 @@ A console-based banking system that simulates real-world banking operations incl
 ## Project Structure
 
 ```
-
 BankingSimulation/
 ├─ src/
 │  └─ main/
@@ -40,6 +39,7 @@ BankingSimulation/
 ├─ bank_reports/
 ├─ pom.xml
 └─ README.md
+
 
 ````
 
