@@ -1,55 +1,64 @@
+```markdown
+# BankingSimulation
 
-# Banking Transaction Simulator (Java)
-
-A console-based banking system built using Core Java, Collections, JDBC, File Reporting, and Email Alerts.
+A console-based banking system that simulates real-world banking operations including customer registration, secure login, deposits, withdrawals, fund transfers, transaction history logging, report generation, and email alerts when minimum balance rules are violated.
 
 ## Features
 
-- Create and manage customer accounts
-- Secure login (SHA-256 password hashing)
-- Deposit, Withdraw, and Transfer funds
-- Minimum balance validation
-- Logs transactions to MySQL and text files
-- Sends low balance email alerts
+- Customer Registration & Secure Login
+- Deposit, Withdraw, Transfer Money
+- Minimum Balance Validation with Alerts
+- Transaction History Display
+- Auto-generated Account Summary & Transaction Reports (`bank_reports/`)
+- Email Alerts for Low Balance or Failed Transactions (Mailtrap / SMTP)
+- Clean, Menu-driven Console Interface
 
-## Technology Stack
+## Tech Stack
 
-| Component            | Technology Used          |
-|---------------------|--------------------------|
-| Language            | Java 21                  |
-| Database            | MySQL + JDBC             |
-| Build Tool          | Maven                    |
-| Logging             | SLF4J Simple Logger      |
-| Email Testing       | Mailtrap SMTP            |
-| Reporting           | Text file logs           |
+| Component | Technology |
+|----------|------------|
+| Language | Java 21 |
+| Build Tool | Maven |
+| Database | MySQL + JDBC |
+| Email Service | SMTP (tested with Mailtrap) |
+| Reports | Text files stored in `bank_reports/` |
 
 ## Project Structure
 
 ```
 
-src/
-├── main/java/org/banking/
-│   ├── dao/
-│   ├── model/
-│   ├── service/
-│   ├── util/
-│   └── Main.java
-└── main/resources/
-└── config.properties
-bank_reports/
+BankingSimulation/
+├─ src/
+│  └─ main/
+│     ├─ java/org/banking/
+│     │  ├─ dao/
+│     │  ├─ model/
+│     │  ├─ service/
+│     │  ├─ util/
+│     │  └─ Main.java
+│     └─ resources/config.properties
+├─ bank_reports/
+├─ pom.xml
+└─ README.md
 
 ````
 
-## Setup
+## Requirements
 
-### 1. Database
+- Java 21
+- Maven 3.9+
+- MySQL 8+
+- (Optional) Mailtrap account for SMTP testing
+
+## Database Setup
+
 ```sql
 CREATE DATABASE bankingsimulation;
 ````
 
-### 2. Configure `config.properties`
+## Configuration (`src/main/resources/config.properties`)
 
-```
+```properties
 db.url=jdbc:mysql://localhost:3306/bankingsimulation
 db.user=YOUR_DB_USERNAME
 db.password=YOUR_DB_PASSWORD
@@ -61,34 +70,85 @@ mail.username=YOUR_MAILTRAP_USERNAME
 mail.password=YOUR_MAILTRAP_PASSWORD
 mail.from=bank.alerts@testmail.com
 mail.starttls=true
+
+report.dir=bank_reports
+min.balance=500
 ```
 
-### 3. Run
+Set `mail.enabled=false` to disable email alerts.
 
-```
+## Build & Run
+
+```bash
 mvn clean package
-mvn exec:java
+java -jar target/BankingSimulation-*.jar
 ```
 
-## Usage
+## Console Usage
 
 ```
-Register → Login → Menu:
-1. Deposit
-2. Withdraw
-3. Transfer
-4. Account Details
-5. Transaction History
+1) Register
+2) Login
+3) Exit
+
+After Login:
+1) Deposit
+2) Withdraw
+3) Transfer
+4) Account Details
+5) Transactions
+6) Logout
 ```
 
-Reports stored in:
+## Screenshots
+
+### Registration
+
+![Registration](LINK_HERE)
+
+### Login
+
+![Login](LINK_HERE)
+
+### Deposit
+
+![Deposit](LINK_HERE)
+
+### Withdraw
+
+![Withdraw](LINK_HERE)
+
+### Transfer
+
+![Transfer](LINK_HERE)
+
+### Account Details
+
+![Account Details](LINK_HERE)
+
+### Transaction History
+
+![Transaction History](LINK_HERE)
+
+### Report File (bank_reports/)
+
+![Report File](LINK_HERE)
+
+### Email Alert (Low Balance)
+
+![Email Alert](LINK_HERE)
+
+## Future Improvements
+
+* Web UI (Spring Boot / Angular / React)
+* Export transaction statements (PDF/CSV)
+* Role-based Admin Dashboard
+* Two-Factor Authentication
+
+## Author
+
+**Preetam Kumar Giri**
+GitHub: `preetamfain2020-tech`
 
 ```
-bank_reports/
-```
-
-Emails visible in Mailtrap inbox.
-
-`
-![img.png](C:\Users\KIIT0001\OneDrive\Desktop\CI\WhatsApp Image 2025-11-07 at 14.02.42_4a6748bd.jpg)``
 ```
