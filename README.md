@@ -1,34 +1,93 @@
 
-```markdown
-````
-## BankingSimulation
+# BankingSimulation
 
 A console-based banking system that simulates real-world banking operations including customer registration, secure login, deposits, withdrawals, fund transfers, transaction history logging, report generation, and email alerts when minimum balance rules are violated.
 
+---
+
+## Table of Contents
+- [Demo / Screenshots](#demo--screenshots)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Project Milestones](#project-milestones)
+- [Requirements](#requirements)
+- [Database Setup](#database-setup)
+- [Configuration](#configuration)
+- [Build & Run](#build--run)
+- [Console Usage](#console-usage)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
+
+---
+
+## Demo / Screenshots
+
+<details>
+<summary><strong>Click to View Screenshots</strong></summary>
+
+### Registration  
+![Registration](https://github.com/user-attachments/assets/32db3610-1414-492b-b192-549d79d76fb4)
+
+### Login  
+![Login](https://github.com/user-attachments/assets/f2e058ad-4757-4d45-bf7f-610eaa413a04)
+
+### Deposit  
+![Deposit](https://github.com/user-attachments/assets/f2e058ad-4757-4d45-bf7f-610eaa413a04)
+
+### Withdraw  
+![Withdraw](https://github.com/user-attachments/assets/793fcbac-e697-4635-aad4-8e3992823d98)
+
+### Transfer  
+![Transfer](https://github.com/user-attachments/assets/44baadcd-8005-46de-a9b9-8c420d727d60)
+
+### Account Details  
+![Account Details](https://github.com/user-attachments/assets/cfab97bb-eeb8-4882-93fa-bc3ea7179493)
+
+### Transaction History  
+![Transaction History](https://github.com/user-attachments/assets/502e220c-1961-40e5-b2b1-3041f2768003)
+
+### Report File  
+![Report File](https://github.com/user-attachments/assets/3ef2f3fc-9a7e-4d66-a307-6215996bbec2)
+
+### Insufficient Balance  
+![Insufficient Balance](https://github.com/user-attachments/assets/ebb66562-7b85-4b90-afb3-43c273680b90)
+
+### Low Balance Email Alert  
+![Email Alert](https://github.com/user-attachments/assets/6aa3a201-7221-4f30-9482-44da717a8bdc)
+
+</details>
+
+---
+
 ## Features
 
-- Customer Registration & Secure Login
-- Deposit, Withdraw, Transfer Money
-- Minimum Balance Validation with Alerts
-- Transaction History Display
-- Auto-generated Account Summary & Transaction Reports (`bank_reports/`)
-- Email Alerts for Low Balance or Failed Transactions (Mailtrap / SMTP)
-- Clean, Menu-driven Console Interface
+- Customer Registration & Secure Login  
+- Deposit, Withdraw, Transfer Money  
+- Minimum Balance Validation with Alerts  
+- Transaction History Display  
+- Auto-generated Account Summary & Transaction Reports (`bank_reports/`)  
+- Email Alerts for Low Balance or Failed Transactions  
+- Menu-driven Console Interface  
 
-## Tech Stack
+---
+
+## Technology Stack
 
 | Component | Technology |
 |----------|------------|
 | Language | Java 21 |
 | Build Tool | Maven |
 | Database | MySQL + JDBC |
-| Email Service | SMTP (tested with Mailtrap) |
-| Reports | Text files stored in `bank_reports/` |
+| Email Service | SMTP (Mailtrap) |
+| Reports | Text files (`bank_reports/`) |
+
+---
 
 ## Project Structure
 
-
 ```
+
 BankingSimulation/
 ├─ src/
 │  └─ main/
@@ -45,12 +104,42 @@ BankingSimulation/
 
 ````
 
+---
+
+## Project Milestones
+
+### Milestone 1 (Weeks 1–2): Introduction & Setup
+- Environment setup  
+- Learned Collections, JDBC, Exception Handling  
+- Designed system models  
+- Created initial project structure  
+
+### Milestone 2 (Weeks 3–4): Account Management Engine
+- Registration & Login system  
+- Minimum balance validations  
+- JDBC-based account storage  
+
+### Milestone 3 (Weeks 5–6): Transaction Processing & Reporting
+- Deposit, Withdraw, Transfer  
+- Validations & exception handling  
+- Auto-generated reports  
+- Email notification integration  
+
+### Milestone 4 (Weeks 7–8): Balance Alert Tracker & Deployment
+- Implemented balance alert tracker  
+- End-to-end testing  
+- Packaged JAR using Maven  
+
+---
+
 ## Requirements
 
-- Java 21
-- Maven 3.9+
-- MySQL 8+
-- (Optional) Mailtrap account for SMTP testing
+- Java 21  
+- Maven 3.9+  
+- MySQL 8+  
+- Mailtrap (optional for SMTP)  
+
+---
 
 ## Database Setup
 
@@ -58,7 +147,11 @@ BankingSimulation/
 CREATE DATABASE bankingsimulation;
 ````
 
-## Configuration (`src/main/resources/config.properties`)
+---
+
+## Configuration
+
+`src/main/resources/config.properties`
 
 ```properties
 db.url=jdbc:mysql://localhost:3306/bankingsimulation
@@ -77,7 +170,13 @@ report.dir=bank_reports
 min.balance=500
 ```
 
-Set `mail.enabled=false` to disable email alerts.
+Disable email alerts:
+
+```
+mail.enabled=false
+```
+
+---
 
 ## Build & Run
 
@@ -85,6 +184,8 @@ Set `mail.enabled=false` to disable email alerts.
 mvn clean package
 java -jar target/BankingSimulation-*.jar
 ```
+
+---
 
 ## Console Usage
 
@@ -102,60 +203,19 @@ After Login:
 6) Logout
 ```
 
-## Screenshots
-
-### 1.Registration
-
-![Registration](https://github.com/user-attachments/assets/32db3610-1414-492b-b192-549d79d76fb4)
-
-### 2.Login
-
-![Login](https://github.com/user-attachments/assets/f2e058ad-4757-4d45-bf7f-610eaa413a04)
-
-### 3.Deposit
-
-![Deposit](https://github.com/user-attachments/assets/f2e058ad-4757-4d45-bf7f-610eaa413a04)
-
-### 4.Withdraw
-
-![Withdraw](https://github.com/user-attachments/assets/793fcbac-e697-4635-aad4-8e3992823d98)
-
-### 5.Transfer
-
-![Transfer](https://github.com/user-attachments/assets/44baadcd-8005-46de-a9b9-8c420d727d60)
-
-### 6.Account Details
-
-![Account Details](https://github.com/user-attachments/assets/cfab97bb-eeb8-4882-93fa-bc3ea7179493)
-
-### 7.Transaction History
-
-![Transaction History](https://github.com/user-attachments/assets/502e220c-1961-40e5-b2b1-3041f2768003)
-
-### 8.Report File (bank_reports/)
-
-![Report File](https://github.com/user-attachments/assets/3ef2f3fc-9a7e-4d66-a307-6215996bbec2)
-
-### 9.Withdraw (Insufficient Balance Case)
-
-![Insufficient Balance](https://github.com/user-attachments/assets/ebb66562-7b85-4b90-afb3-43c273680b90)
-
-### 10.Email Alert (Low Balance)
-
-![Email Alert](https://github.com/user-attachments/assets/6aa3a201-7221-4f30-9482-44da717a8bdc)
+---
 
 ## Future Improvements
 
 * Web UI (Spring Boot / Angular / React)
-* Export transaction statements (PDF/CSV)
-* Role-based Admin Dashboard
+* Export statements (PDF/CSV)
+* Admin Dashboard
 * Two-Factor Authentication
+
+---
 
 ## Author
 
 **Preetam Kumar Giri**
-```
-GitHub:`preetamfain2020-tech`
-```
 
-
+GitHub: `preetamfain2020-tech`
